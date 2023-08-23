@@ -2,7 +2,7 @@ import { tokens } from '@tamagui/themes'
 import { createTheme, createTokens } from 'tamagui';
 import * as Colors from './utils/ColorConstants'
 
-const customToken = createTokens({
+export const customToken = createTokens({
   color: {
     ...tokens.color,
     "primaryLighter": Colors.PRIMARY_LIGHTER,

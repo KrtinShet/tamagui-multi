@@ -41,7 +41,6 @@ const bodyFont = createFont({
 
 const config = createTamagui({
   animations,
-  defaultTheme: 'dark',
   shouldAddPrefersColorThemes: false,
   themeClassNameOnRoot: false,
   shorthands,

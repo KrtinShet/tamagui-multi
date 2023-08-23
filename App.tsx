@@ -4,25 +4,13 @@ import { useFonts } from 'expo-font'
 import { StatusBar } from 'expo-status-bar'
 import { useColorScheme } from 'react-native'
 import { Paragraph, TamaguiProvider, Theme, View } from 'tamagui'
-import { themes } from './themes';
+import { customToken } from './themes';
 import config from './tamagui.config'
-
-const style = (theme: "light" | "dark") => {
-  return StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: themes[theme].background.toString(),
-      color: themes[theme].color.valueOf(),
-      width: 'auto',
-      justifyContent: "center",
-      alignItems: "center"
-    }
-  });
-}
 
 
 export default function App() {
   const colorScheme = useColorScheme()
+  console.log("Color scheme", colorScheme)
 
   const [loaded] = useFonts({
     PublicSans: require('./assets/fonts/PublicSans/PublicSans-Regular.ttf'),
@@ -31,10 +19,13 @@ export default function App() {
     PublicSansSemiBold: require('./assets/fonts/PublicSans/PublicSans-SemiBold.ttf'),
   })
 
-
-  const styles = useMemo(() => style(colorScheme === 'dark' ? 'dark' : 'light'), [colorScheme])
-
-
+  let backgroundColor = useMemo(() => {
+    if (colorScheme === 'dark') {
+      return customToken.color.backgroundDark
+    } else {
+      return customToken.color.backgroundLight
+    }
+  }, [colorScheme])
 
   if (!loaded) {
     return null
@@ -42,8 +33,8 @@ export default function App() {
 
   return (
     <TamaguiProvider config={config}>
-      <View style={styles.container}>
-        <Theme name={colorScheme === 'dark' ? 'dark' : 'light'}>
+      <View f={1} backgroundColor={backgroundColor}>
+        <Theme name={colorScheme}>
           <Paragraph >
             Marketing
           </Paragraph>
