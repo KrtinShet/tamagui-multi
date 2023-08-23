@@ -47,6 +47,15 @@ export const grey900 = "#161C24"
 export const WHITE = "#FFFFFF"
 export const BLACK = "#000000"
 
+export const TEXT_PRIMARY_LIGHT = grey800;
+export const TEXT_SECONDARY_LIGHT = grey600;
+export const TEXT_DISABLED_LIGHT = grey500;
+
+export const TEXT_PRIMARY_DARK = WHITE;
+export const TEXT_SECONDARY_DARK = grey500;
+export const TEXT_DISABLED_DARK = grey600;
+
+
 export const BACKGROUND_LIGHT = WHITE;
 export const BACKGROUND_PAPER_LIGHT = WHITE;
 export const BACKGROUND_NETURAL_LIGHT = grey100;

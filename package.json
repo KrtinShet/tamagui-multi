@@ -15,24 +15,27 @@
     "@tamagui/babel-plugin": "^1.53.2",
     "@tamagui/config": "^1.53.2",
     "@tamagui/font-inter": "^1.53.2",
-    "@tamagui/theme-base": "^1.53.2",
+    "@tamagui/lucide-icons": "1.29",
+    "@tamagui/theme-base": "^1.29",
     "@tamagui/themes": "^1.53.2",
+    "@types/react": "~18.2.14",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "expo": "~49.0.7",
     "expo-font": "^11.4.0",
+    "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-native": "0.72.3",
     "react-native-reanimated": "~3.3.0",
+    "react-native-svg": "^13.12.0",
     "react-native-web": "^0.19.7",
-    "tamagui": "^1.53.2",
-    "expo-splash-screen": "~0.20.5",
-    "@types/react": "~18.2.14"
+    "tamagui": "^1.53.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "webpack": "^5.88.2"
   },
   "private": true
 }
