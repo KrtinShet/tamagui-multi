@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar'
 import { useColorScheme, Text } from 'react-native'
 import { Button, Checkbox, Input, Paragraph, TamaguiProvider, Theme, View } from 'tamagui'
 // import { customToken } from './themes';
-import config from './tamagui.config'
+import config from "./Themes/tamagui.config";
 
 
 export default function App() {

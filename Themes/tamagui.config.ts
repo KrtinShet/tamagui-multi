@@ -1,9 +1,9 @@
 import { createAnimations } from '@tamagui/animations-react-native';
 import { createMedia } from '@tamagui/react-native-media-driver';
 import { shorthands } from '@tamagui/shorthands';
-import { tokens } from '@tamagui/themes';
 import { createFont, createTamagui } from 'tamagui';
-import { themes } from './themes';
+import { tokens } from './tokens';
+import { themes } from './index';
 
 
 const animations = createAnimations({
@@ -28,20 +28,42 @@ const animations = createAnimations({
 
 const bodyFont = createFont({
   family: "PublicSans",
-  size: {
-    6: 15
-  },
   face: {
     800: { normal: "PublicSansExtraBold" },
     700: { normal: "PublicSansBold" },
     600: { normal: "PublicSansSemiBold" },
     400: { normal: "PublicSans" },
   },
+  size: {
+    1: 11,
+    2: 12,
+    3: 13,
+    4: 14,
+    true: 14,
+    5: 16,
+    6: 18,
+    7: 20,
+    8: 23,
+    9: 30,
+    10: 46,
+    11: 55,
+    12: 62,
+    13: 72,
+    14: 92,
+    15: 114,
+    16: 134,
+  },
+  letterSpacing: {
+    4: 0
+  },
+  weight: {
+    4: '300',
+  },
 })
 
 const config = createTamagui({
   animations,
-  shouldAddPrefersColorThemes: false,
+  shouldAddPrefersColorThemes: true,
   themeClassNameOnRoot: false,
   shorthands,
   fonts: {
