@@ -28,7 +28,7 @@ let options = {
     ),
     'react-vendors': ['react']
   },
-  
+
   output: {
     path: path.resolve(__dirname, "build", browser),
     filename: '[name].bundle.js',
@@ -130,10 +130,6 @@ let options = {
             const manifest = require(path);
             return Buffer.from(JSON.stringify(manifest, null, 2));
           },
-        },
-        {
-          from: path.join(__dirname, "..", "..", "bridge", "injected-provider", "dist", "injected", "injectedExtension.js"),
-          to: path.join(__dirname, "build", browser, "injected.js"),
         }
       ],
     }),
