@@ -1,0 +1,20 @@
+{
+  "name": "@chaiwallet/web",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env TAMAGUI_TARGET=web expo start --web",
+    "web":  "cross-env TAMAGUI_TARGET=web expo start --web",
+    "build": "expo build:web",
+    "custom:start": "cross-env NODE_ENV=development  node ./development/devServer.js",
+    "custom:build": "cross-env NODE_ENV=development  node ./development/build.js"
+  },
+  "dependencies": {
+    "@chaiwallet/app": "^0.0.1",
+    "@expo/webpack-config": "^18.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.10"
+  },
+  "private": true
+}

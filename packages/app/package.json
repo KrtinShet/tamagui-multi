@@ -1,0 +1,14 @@
+{
+  "name": "@chaiwallet/app",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "main": "src/index.tsx",
+  "scripts": {},
+  "keywords": [],
+  "author": "Krtin Shet <krtinshet.dev@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@chaiwallet/shared": "*"
+  }
+}

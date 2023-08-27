@@ -1,6 +1,45 @@
 {
   "compilerOptions": {
-    "jsx": "react"
-},
-  "extends": "expo/tsconfig.base"
+    "incremental": true,
+    "noImplicitOverride": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "skipLibCheck": false,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "ESNext",
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "isolatedModules": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": true,
+    "types": [
+      "chrome",
+      "jest"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+    ]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
 }

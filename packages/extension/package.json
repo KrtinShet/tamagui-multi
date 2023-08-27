@@ -1,0 +1,24 @@
+{
+  "name": "@chaiwallet/extension",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Multi-Chain, Non Custodial wallet in your browser",
+  "main": "",
+  "scripts": {
+    "build:chrome": "cross-env TAMAGUI_TARGET=web NODE_ENV=production EXT_PLATFORM=chrome node ./development/build.js",
+    "build:firefox": "cross-env TAMAGUI_TARGET=web NODE_ENV=production EXT_PLATFORM=firefox node ./development/build.js",
+    "start:chrome": "cross-env TAMAGUI_TARGET=web NODE_ENV=development EXT_PLATFORM=chrome node ./development/devServer.js",
+    "start:firefox": "cross-env TAMAGUI_TARGET=web NODE_ENV=development EXT_PLATFORM=firefox node ./development/devServer.js",
+    "build": "concurrently \"npm run build:chrome\"  \"npm run build:firefox\"",
+    "start": "concurrently  \"npm run start:chrome\"   \"npm run start:firefox\""
+  },
+  "keywords": [],
+  "author": "https://chaidex.com",
+  "license": "ISC",
+  "dependencies": {
+    "@chaiwallet-bridge/ext-hosted": "*",
+    "@chaiwallet-bridge/inpage-injected": "*",
+    "@chaiwallet/app": "*",
+    "@chaiwallet/shared": "*"
+  }
+}
