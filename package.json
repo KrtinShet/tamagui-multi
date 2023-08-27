@@ -9,7 +9,7 @@
   "author": "Krtin Shet <krtinshet.dev@gmail.com> ",
   "license": "ISC",
   "workspaces": [
-    "packages/**",
+    "packages/**"
   ],
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.19.3",

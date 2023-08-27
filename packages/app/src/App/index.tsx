@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "react-native";
+import { Text, Button } from "tamagui";
 import FontProvider from "../Providers/FontProvider/FontProvider";
 import ThemeProvider from "../Providers/ThemeProvider";
 
@@ -8,10 +8,10 @@ const App: React.FC<{}> = () => {
     <>
       <FontProvider>
         <ThemeProvider>
-          <Text style={{ fontFamily: "PublicSans" }}> Big World K Marketing</Text>
-          <Text style={{ fontFamily: "PublicSans" }}>
-            Marketing Fonts in PublicSans
+          <Text fontFamily={"$body"}>
+            Marketing, Fonts is PublicSans
           </Text>
+          <Button size="$6">Lorem ipsum</Button>
         </ThemeProvider>
       </FontProvider>
     </>
